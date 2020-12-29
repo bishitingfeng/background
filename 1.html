@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=""/>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <video src="" id="video"></video>
+</div>
+<script>
+    let video = document.querySelector('#video');
+    window.navigator.mediaDevices.getUserMedia({
+        video:true
+    }).then(res=>{
+        video.srcObject=res
+        video.play();
+    })
+</script>
+</body>
+</html>
